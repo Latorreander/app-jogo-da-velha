@@ -27,7 +27,7 @@ gameArea.addEventListener('click', e => {
 
 
 const market = (e) => {
-    
+
     if (e.target.innerText !== '') {
         return
       }
@@ -60,6 +60,10 @@ const checkPossibilityWinner = () => {
         setTimeout(() => {
             alert('BOLA VENCEU!')
         }, 1000); 
+
+        setTimeout(() => {
+         this.location.reload()   
+        }, 2000); 
     } 
     
     if(gameArea.childNodes[1].innerText === '❌' && gameArea.childNodes[3].innerText === '❌' && gameArea.childNodes[5].innerText === '❌' || gameArea.childNodes[7].innerText === '❌' && gameArea.childNodes[9].innerText === '❌' && gameArea.childNodes[11].innerText === '❌' || gameArea.childNodes[13].innerText === '❌' && gameArea.childNodes[15].innerText === '❌' && gameArea.childNodes[17].innerText === '❌' || gameArea.childNodes[1].innerText === '❌' && gameArea.childNodes[7].innerText === '❌' && gameArea.childNodes[13].innerText === '❌' || gameArea.childNodes[3].innerText === '❌' && gameArea.childNodes[9].innerText === '❌' && gameArea.childNodes[15].innerText === '❌' || gameArea.childNodes[5].innerText === '❌' && gameArea.childNodes[11].innerText === '❌' && gameArea.childNodes[17].innerText === '❌' || gameArea.childNodes[1].innerText === '❌' && gameArea.childNodes[9].innerText === '❌' && gameArea.childNodes[17].innerText === '❌' || gameArea.childNodes[5].innerText === '❌' && gameArea.childNodes[9].innerText === '❌' && gameArea.childNodes[13].innerText === '❌') {
@@ -67,7 +71,11 @@ const checkPossibilityWinner = () => {
         playWinnerSound()
         setTimeout(() => {
             alert('"X" VENCEU!')
-        }, 1000); 
+        }, 1000);
+        
+        setTimeout(() => {
+            this.location.reload()   
+           }, 2000); 
     }    
 }
 
