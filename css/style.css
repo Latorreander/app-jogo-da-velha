@@ -8,6 +8,7 @@ main {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; 
 }
@@ -25,4 +26,18 @@ main {
     align-items: center;
     background-color: #DCDCDC;
     border: 1px solid #8FBC8F;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    padding-top: 20px;
+    column-gap: 20px;
+    
+}
+
+.buttons #reset, #button-sound {
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
 }

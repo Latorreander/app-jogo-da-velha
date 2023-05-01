@@ -2,9 +2,14 @@
 const gameArea = document.querySelector('.game-area')
 const soundClick = document.getElementById('sound-click')
 const soundWinner = document.getElementById('sound-winner')
+const soundOn_Off = document.querySelector('#button-sound')
+const resetButton = document.querySelector('#reset')
+
+
 
 let mark = ''
 let soundOn = true
+console.log(soundOn)
 
 const clickSound = () => {
     if (soundOn === true) {
@@ -17,6 +22,19 @@ const playWinnerSound = () => {
         soundWinner.play()
     }
 }
+
+soundOn_Off.addEventListener('click', () => {
+    if(soundOn === true) {
+      soundOn = false  
+    }else {
+       soundOn = true
+    }
+})
+
+resetButton.addEventListener('click', () => {
+    this.location.reload()
+})
+
 
 gameArea.addEventListener('click', e => {
 
