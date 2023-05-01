@@ -4,7 +4,7 @@ const soundClick = document.getElementById('sound-click')
 const soundWinner = document.getElementById('sound-winner')
 
 let mark = ''
-let soundOn = true
+let soundOn = false
 
 const clickSound = () => {
     if (soundOn === true) {
@@ -27,14 +27,19 @@ gameArea.addEventListener('click', e => {
 
 
 const market = (e) => {
+    
+    const pressedMarkedSquare = e.target.innerText !== ''
+    const variableIsNotEmpty = mark !== ''
 
-    if (e.target.innerText !== '') {
+    if (pressedMarkedSquare) {
+
         return
       }
     
-      if (mark !== ''){
+      if (variableIsNotEmpty){
         
         e.target.innerText = '❌'
+
         mark = ''
     
       }
@@ -58,7 +63,7 @@ const checkPossibilityWinner = () => {
        
         playWinnerSound()
         setTimeout(() => {
-            alert('BOLA VENCEU!')
+            alert('🔴 VENCEU!')
         }, 1000); 
 
         setTimeout(() => {
@@ -70,7 +75,7 @@ const checkPossibilityWinner = () => {
         
         playWinnerSound()
         setTimeout(() => {
-            alert('"X" VENCEU!')
+            alert('❌ VENCEU!')
         }, 1000);
         
         setTimeout(() => {
