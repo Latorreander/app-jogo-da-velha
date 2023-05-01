@@ -4,7 +4,7 @@ const soundClick = document.getElementById('sound-click')
 const soundWinner = document.getElementById('sound-winner')
 
 let mark = ''
-let soundOn = false
+let soundOn = true
 
 const clickSound = () => {
     if (soundOn === true) {
