@@ -29,14 +29,14 @@ main {
     cursor: pointer;
 }
 
-.buttons {
+.buttons-area {
     display: flex;
     padding-top: 20px;
     column-gap: 20px;
     
 }
 
-.buttons #reset, #button-sound {
+.buttons-area #reset, #button-on-off {
     cursor: pointer;
     width: 100px;
     height: 35px;
