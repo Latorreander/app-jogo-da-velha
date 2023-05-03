@@ -3,6 +3,16 @@ import { soundOn } from "./control-buttons.js"
 const soundClick = document.getElementById('sound-click')
 const soundWinner = document.getElementById('sound-winner')
 const soundEffectButtons = document.getElementById('soundEffect-buttons')
+const musicEffect = document.getElementById('music-effect')
+
+
+const pauseMusic = () => {
+    musicEffect.pause()
+}
+
+const playMusic = () => {
+    musicEffect.play()
+}
 
 const markerWithSoundEffect = () => {
     if (soundOn === true) {
@@ -20,4 +30,4 @@ const pushingButtonSoundEffect = () => {
     soundEffectButtons.play()
 }
 
-export { playWinnerSoundEffect, pushingButtonSoundEffect, markerWithSoundEffect }
+export { playWinnerSoundEffect, pushingButtonSoundEffect, markerWithSoundEffect, pauseMusic, playMusic }
