@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <audio id="sound-click" src="./css/sounds/stop-13692.mp3"></audio>
-    <audio id="sound-winner" src="./css/sounds/open-new-level-143027.mp3"></audio>
-    <audio id="soundEffect-buttons" src="./css/sounds/click-button-140881.mp3"></audio>
-    <main>
-       
-        <div class="game-area">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <audio id="sound-click" src="./css/sounds/stop-13692.mp3"></audio>
+        <audio
+            id="sound-winner"
+            src="./css/sounds/open-new-level-143027.mp3"
+        ></audio>
+        <audio
+            id="soundEffect-buttons"
+            src="./css/sounds/click-button-140881.mp3"
+        ></audio>
+        <main>
+            <div class="game-area">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            <div class="buttons-area">
+                <button id="button-on-off">SOUND ON/OFF</button>
+                <button id="reset">RESET</button>
+            </div>
+        </main>
 
-           <div class="square A"></div>
-           <div class="square B"></div>
-           <div class="square C"></div>
-           <div class="square D"></div>
-           <div class="square E"></div>
-           <div class="square F"></div>
-           <div class="square G"></div>
-           <div class="square H"></div>
-           <div class="square I"></div>
-           
-        </div>
-        <div class="buttons-area">
-
-            <button id="button-on-off">SOUND ON/OFF</button>
-            <button id="reset">RESET</button>
-
-         </div>
-        
-    </main>
-   
-    <script src="./js/app.js"></script>
-</body>
+        <script src="./js/app.js" type="module"></script>
+    </body>
 </html>
