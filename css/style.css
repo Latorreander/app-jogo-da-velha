@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,34 +10,92 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    background-color: #dcdcdc;
 }
 
 .game-area {
     display: grid;
     grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 150px 150px 150px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    grid-template-rows: 150px 150px 150px;  
 }
 
 .game-area div {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #DCDCDC;
-    border: 1px solid #8FBC8F;
+    border: 2px solid #8fbc8f;
     cursor: pointer;
+}
+
+.game-area div.A {
+    border-top: none;
+    border-left: none;
+}
+
+.game-area div.B {
+    border-top: none;
+}
+
+.game-area div.C {
+    border-top: none;
+    border-right: none;
+}
+
+.game-area div.D {
+    border-left: none;
+}
+
+.game-area div.F {
+    border-right: none;
+}
+
+.game-area div.G {
+   border-left: none;
+   border-bottom: none; 
+}
+
+.game-area div.H {
+    border-bottom: none;
+}
+
+.game-area div.I {
+    border-bottom: none;
+    border-right: none;
 }
 
 .buttons-area {
     display: flex;
     padding-top: 20px;
-    column-gap: 20px;
-    
+    column-gap: 40px;
+    margin-top: 50px;
 }
 
-.buttons-area #reset, #button-on-off {
+.buttons-area #reset,
+#button-on-off {
     cursor: pointer;
     width: 100px;
     height: 35px;
+    border-radius: 10px;
+    background-color: #3CB371;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
 }
+
+.buttons-area #reset:active {
+    box-shadow: none;
+    transform: translateX(2px);
+    top: 10px;
+    left: 15px;
+}
+
+.buttons-area #button-on-off:active { 
+    box-shadow: none;
+    transform: translateX(2px);
+    top: 10px;
+    left: 15px;
+}
+
+
+
+

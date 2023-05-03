@@ -18,7 +18,7 @@ resetButton.addEventListener("click", () => {
     pushingButtonSoundEffect();
     setTimeout(() => {
         window.location.reload();
-    }, 1000);
+    }, 500);
 });
 
 export { soundOn };
