@@ -1,6 +1,6 @@
 import { markerWithSoundEffect } from "./sounds-effects.js";
-import { checkPossibilityWinner } from "./check-victory.js";
-import { gameArea } from "./check-victory.js";
+import { checkPossibilityWinner, gameArea } from "./check-victory.js";
+
 
 let mark = "";
 

@@ -7,12 +7,13 @@ let soundOn = true;
 
 soundOn_Off.addEventListener("click", () => {
     pushingButtonSoundEffect();
+    
     if (soundOn === true) {
-        pauseMusic()
+        pauseMusic();
         soundOn = false;
     } else {
         soundOn = true;
-        playMusic()
+        playMusic();  
     }
 });
 

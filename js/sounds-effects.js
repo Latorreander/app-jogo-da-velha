@@ -1,13 +1,14 @@
 import { soundOn } from "./control-buttons.js"
 
 const soundClick = document.getElementById('sound-click')
-const soundWinner = document.getElementById('sound-winner')
+const winnerSound = document.getElementById('winner-sound')
 const soundEffectButtons = document.getElementById('soundEffect-buttons')
 const musicEffect = document.getElementById('music-effect')
+const tiedGameSound = document.getElementById('tied-game-sound')
 
 
 const pauseMusic = () => {
-    musicEffect.pause()
+    musicEffect.pause()  
 }
 
 const playMusic = () => {
@@ -22,7 +23,13 @@ const markerWithSoundEffect = () => {
 
 const playWinnerSoundEffect = () => {
     if (soundOn === true) {
-        soundWinner.play()
+        winnerSound.play()
+    }
+}
+
+const playtiedSoundEffect = () => {
+    if (soundOn === true) {
+        tiedGameSound.play()
     }
 }
 
@@ -30,4 +37,4 @@ const pushingButtonSoundEffect = () => {
     soundEffectButtons.play()
 }
 
-export { playWinnerSoundEffect, pushingButtonSoundEffect, markerWithSoundEffect, pauseMusic, playMusic }
+export { playWinnerSoundEffect, pushingButtonSoundEffect, markerWithSoundEffect, pauseMusic, playMusic, playtiedSoundEffect }
