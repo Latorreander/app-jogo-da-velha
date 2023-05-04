@@ -1,4 +1,4 @@
-import { markerWithSoundEffect } from "./sounds-effects.js";
+import { markerWithSoundEffect, playMusic } from "./sounds-effects.js";
 import { checkPossibilityWinner, gameArea } from "./check-victory.js";
 
 
@@ -32,6 +32,8 @@ gameArea.addEventListener("click", (e) => {
     placeMarker(e);
     checkPossibilityWinner();
 });
+
+
 
 
 

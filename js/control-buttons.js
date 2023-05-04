@@ -1,4 +1,5 @@
 import { pushingButtonSoundEffect, pauseMusic, playMusic } from "./sounds-effects.js";
+import { clearGameArea } from "./clear-game.js";
 
 const sound_On_Off = document.querySelector("#button-on-off");
 const resetButton = document.querySelector("#reset-button");
@@ -10,10 +11,10 @@ let musicOn = true
 sound_On_Off.addEventListener("click", () => {
     pushingButtonSoundEffect();
     
-    if (soundOn === true) {
-        
+    if ( soundOn ) {
         soundOn = false;
-    } else {
+    } 
+    else {
         soundOn = true;  
     }
 });
@@ -21,21 +22,22 @@ sound_On_Off.addEventListener("click", () => {
 resetButton.addEventListener("click", () => {
     pushingButtonSoundEffect();
  
-    setTimeout(() => {
-        window.location.reload();
-        
-    }, 500);
+        window.location.reload()
+ 
 });
 
 music_On_Off.addEventListener('click', () => {
     pushingButtonSoundEffect()
 
-    if(musicOn) {
+    if ( musicOn ) {
         musicOn = false
         pauseMusic()
-    }else{
+       
+    }
+    else {
         musicOn = true
         playMusic()
+        
     }
 })
 
