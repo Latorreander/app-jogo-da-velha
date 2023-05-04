@@ -4,7 +4,7 @@ const gameArea = document.querySelector(".game-area");
 
 const messageVictory_O = "⭕ VENCEU👏👏❗"
 const messageVictoryX = "❌ VENCEU👏👏❗"
-const messageTiedGame = " EMPATOU 😮😮❗"
+const messageTiedGame = "EMPATE😮😮❗"
 
 const checkPossibilityWinner = () => {
 
@@ -78,11 +78,11 @@ const checkPossibilityWinner = () => {
         }, 1000) 
 
         setTimeout(() => {
-            window.location.reload();
-        }, 2000)
+            window.location.reload(true);
+        }, 2000) 
     } 
-
-    else if( 
+    
+     if( 
         (gameArea.childNodes[1].innerText !== "" &&
             gameArea.childNodes[3].innerText !== "" &&
             gameArea.childNodes[5].innerText !== "") &&
@@ -99,7 +99,7 @@ const checkPossibilityWinner = () => {
             gameArea.childNodes[9].innerText !== "" &&
             gameArea.childNodes[15].innerText !== "") &&
         (gameArea.childNodes[5].innerText !== "" &&
-    gameArea.childNodes[11].innerText !== "" &&
+        gameArea.childNodes[11].innerText !== "" &&
             gameArea.childNodes[17].innerText !== "") &&
         (gameArea.childNodes[1].innerText !== "" &&
             gameArea.childNodes[9].innerText !== "" &&
@@ -115,7 +115,7 @@ const checkPossibilityWinner = () => {
        }, 500);
 
         setTimeout(() => {
-            window.location.reload();
+            window.location.reload(true);
         }, 2000); 
     }
 };

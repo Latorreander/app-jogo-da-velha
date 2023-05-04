@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'digital';
+    src: url(./fonts/digital-7.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -12,6 +17,42 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #dcdcdc;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+    min-width: 300px;
+    border: 2px solid #8fbc8f;
+    text-align: center;
+    column-gap: 50px;
+    padding:  10px 20px 10px 20px;
+}
+
+
+.scoreboard .X, .O {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 34px;
+}
+
+
+.scoreboard p {
+    padding-top: 20px;
+    font-size: 28px;
+    font-family: 'digital';
+    
+}
+
+.separator {
+    background-color: #8fbc8f;;
+    width: 1px;
+    height: 80px;
+    padding-top: 20px;
 }
 
 .game-area {
@@ -71,8 +112,8 @@ main {
     margin-top: 50px;
 }
 
-.buttons-area #reset,
-#button-on-off {
+.buttons-area #reset-button,
+#button-on-off, #music-on-off {
     cursor: pointer;
     width: 100px;
     height: 35px;
@@ -82,19 +123,16 @@ main {
 
 }
 
-.buttons-area #reset:active {
+.buttons-area #button-on-off:active, #reset-button:active, #music-on-off:active { 
     box-shadow: none;
     transform: translateX(2px);
     top: 10px;
     left: 15px;
 }
 
-.buttons-area #button-on-off:active { 
-    box-shadow: none;
-    transform: translateX(2px);
-    top: 10px;
-    left: 15px;
-}
+
+
+
 
 
 

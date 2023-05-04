@@ -32,3 +32,7 @@ gameArea.addEventListener("click", (e) => {
     placeMarker(e);
     checkPossibilityWinner();
 });
+
+
+
+

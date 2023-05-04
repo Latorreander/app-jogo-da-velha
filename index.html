@@ -5,15 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/style.css" />
-        <title>Document</title>
+        <title>Jogo da Velha</title>
     </head>
     <body>
         <audio id="sound-click" src="./css/sounds/stop-13692.mp3"></audio>
         <audio id="winner-sound"src="./css/sounds/open-new-level-143027.mp3"></audio>
         <audio id="soundEffect-buttons"src="./css/sounds/click-button-140881.mp3"></audio>
-        <audio id="music-effect" src="./css/sounds/life-of-a-wandering-wizard-15549.mp3" autoplay="autoplay" loop="loop"></audio>
+        <audio id="musicSound" src="./css/sounds/life-of-a-wandering-wizard-15549.mp3" autoplay loop></audio>
         <audio id="tied-game-sound" src="./css/sounds/262312__steffcaffrey__cat-meow1-80256.mp3"></audio>
         <main>
+            <div class="scoreboard">
+                <div class="X">❌
+                    <p>00</p>
+                </div>
+                <div class="separator"></div>
+                <div class="O">⭕
+                    <p>00</p>
+                </div>
+            </div>
             <div class="game-area">
                 <div class="square A"></div>
                 <div class="square B"></div>
@@ -26,8 +35,9 @@
                 <div class="square I"></div>
             </div>
             <div class="buttons-area">
-                <button id="button-on-off">SOUND ON/OFF</button>
-                <button id="reset">RESET</button>
+                <button id="button-on-off">SOUND CLICK ON/OFF</button>
+                <button id="reset-button">RESET</button>
+                <button id="music-on-off">MUSIC ON/OFF</button>
             </div>
         </main>
 

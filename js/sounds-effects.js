@@ -1,18 +1,23 @@
-import { soundOn } from "./control-buttons.js"
+import { soundOn, musicOn } from "./control-buttons.js"
 
 const soundClick = document.getElementById('sound-click')
 const winnerSound = document.getElementById('winner-sound')
 const soundEffectButtons = document.getElementById('soundEffect-buttons')
-const musicEffect = document.getElementById('music-effect')
+const musicEffect = document.getElementById('musicSound')
 const tiedGameSound = document.getElementById('tied-game-sound')
+
 
 
 const pauseMusic = () => {
     musicEffect.pause()  
 }
 
+
 const playMusic = () => {
+    if(musicOn){
     musicEffect.play()
+    }
+     
 }
 
 const markerWithSoundEffect = () => {
