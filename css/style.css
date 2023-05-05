@@ -15,6 +15,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #dcdcdc;
+
+}
+
 
 main {
     width: 100vw;
@@ -23,7 +28,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #dcdcdc;
+   
 }
 
 .scoreboard {
@@ -32,14 +37,14 @@ main {
     align-items: center;
     font-size: 25px;
     margin-bottom: 50px;
-    min-width: 300px;
     border: 2px solid #8fbc8f;
     text-align: center;
     padding: 10px;
+    width: 300px;
 }
 
 
-.scoreboard .X, .O {
+.scoreboard .market {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,6 +124,7 @@ main {
     column-gap: 40px;
     margin-top: 50px;
 }
+
 
 .buttons-area #reset-button,
 #on-off-button, #music-on-off,#clear-button {

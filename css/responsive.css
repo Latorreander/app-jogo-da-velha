@@ -1,0 +1,36 @@
+@media(max-width: 426px){
+    .game-area {
+        grid-template-columns: 110px 110px 110px;
+        grid-template-rows: 110px 110px 110px;  
+    }
+
+    .scoreboard {
+        width: 250px;
+        height: 90px;
+    }
+
+    .scoreboard .market {
+        font-size: 20px;
+    }
+    
+
+    .buttons-area {
+        width: 370px;
+        column-gap: 20px;
+          
+    }
+
+    .buttons-area  #reset-button, #music-on-off, #clear-button, #on-off-button {
+         font-size: 12px;   
+        
+    }
+}
+
+@media(max-width: 376px){
+
+    .buttons-area {
+        width: 350px;
+        column-gap: 20px;
+        
+    }
+}
