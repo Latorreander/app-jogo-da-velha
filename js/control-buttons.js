@@ -11,7 +11,7 @@ const clearButton = document.querySelector('#clear-button')
 
 
 let soundOn = true;
-let musicOn = true
+let musicOn = false
 
 sound_On_Off.addEventListener("click", () => {
     buttonClickSounds();
@@ -34,11 +34,12 @@ resetButton.addEventListener("click", () => {
 
 music_On_Off.addEventListener('click', () => {
     buttonClickSounds()
-
+    
     if ( musicOn ) {
-        musicOn = false
+
         pauseMusic()
-       
+        musicOn = false
+     
     }
     else {
         musicOn = true
