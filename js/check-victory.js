@@ -5,6 +5,8 @@ import { clearGameArea } from "./clear-game.js";
 import { o_Market, x_Market } from "./app.js";
 import { rounds } from "./rounds.js";
 
+let link = 'https://www.linkedin.com/in/anderson-latorre-cabral-a48b78201/ '
+
 const gameArea = document.querySelector(".game-area");
 const x_Points = document.getElementById('X')
 const o_Points = document.getElementById('O')
@@ -125,7 +127,9 @@ const circleVictoryReturn = () => {
         divMessage.classList.add('active')
         gameArea.classList.add('removed')
         setTimeout(() => {
-            window.location.reload()
+
+            confirm('jogar dinovo?') ? window.location.reload() : alert(`Me siga no linkedIn: ${link}
+            Obrigado!`)
         }, 8000);     
     } 
 
@@ -151,7 +155,7 @@ const xisVictoryReturn = () => {
         gameArea.classList.add('removed')
             
         setTimeout(() => {
-        window.location.reload()
+        confirm('jogar dinovo?')
         }, 8000); 
     }  
 }
