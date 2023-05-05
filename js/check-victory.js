@@ -9,6 +9,8 @@ const x_Points = document.getElementById('X')
 const o_Points = document.getElementById('O')
 const divMessage = document.querySelector('.message')
 
+const rounds = '2'
+
 const checkPossibilityWinner = () => {
 
      if (
@@ -115,7 +117,7 @@ const circleVictoryReturn = () => {
         clearGameArea()
     }, 1000);
     
-    if(o_Points.lastElementChild.innerText === '1') {
+    if(o_Points.lastElementChild.innerText === rounds) {
         pauseMusic()
         winnerFinnaly()
 
@@ -140,7 +142,7 @@ const xisVictoryReturn = () => {
         clearGameArea()
     }, 1000); 
     
-    if(x_Points.lastElementChild.innerText === '3') {
+    if(x_Points.lastElementChild.innerText === rounds) {
         pauseMusic()
         winnerFinnaly()
 
