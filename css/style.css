@@ -1,12 +1,11 @@
 @font-face {
-    font-family: 'digital';
+    font-family: "digital";
     src: url(./fonts/digital-7.ttf);
 }
 
 @font-face {
-    font-family: 'digital disco';
-    src: url(./fonts/DigitalDisco.ttf)
-
+    font-family: "digital disco";
+    src: url(./fonts/DigitalDisco.ttf);
 }
 
 * {
@@ -17,9 +16,7 @@
 
 body {
     background-color: #dcdcdc;
-
 }
-
 
 main {
     width: 100vw;
@@ -28,7 +25,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
 }
 
 .scoreboard {
@@ -43,7 +39,6 @@ main {
     width: 300px;
 }
 
-
 .scoreboard .market {
     display: flex;
     flex-direction: column;
@@ -52,28 +47,43 @@ main {
     width: 34px;
 }
 
-
 .scoreboard p {
     padding-top: 20px;
     font-size: 28px;
-    font-family: 'digital';
-    
+    font-family: "digital";
 }
 
 .separator {
-    background-color: #8fbc8f;;
+    background-color: #8fbc8f;
     width: 1px;
     height: 80px;
     padding-top: 20px;
 }
 
+.message.active {
+    display: block;
+}
+
+.message {
+    display: none;
+}
+
+.message h1 {
+    font-size: 50px;
+    margin: 120px 0 120px 0;
+}
+
 .game-area {
     display: grid;
     grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 150px 150px 150px;  
+    grid-template-rows: 150px 150px 150px;
+}
+.game-area.removed {
+    display: none;
+    border: none;
 }
 
-.game-area div {
+.game-area .square {
     display: flex;
     font-size: 40px;
     justify-content: center;
@@ -105,8 +115,8 @@ main {
 }
 
 .game-area div.G {
-   border-left: none;
-   border-bottom: none; 
+    border-left: none;
+    border-bottom: none;
 }
 
 .game-area div.H {
@@ -125,31 +135,28 @@ main {
     margin-top: 50px;
 }
 
-
 .buttons-area #reset-button,
-#on-off-button, #music-on-off,#clear-button {
+#on-off-button,
+#music-on-off,
+#clear-button {
     cursor: pointer;
-    font-family: 'digital disco';
+    font-family: "digital disco";
     font-size: 14px;
     width: 100px;
     height: 35px;
     border-radius: 10px;
-    background-color: #3CB371;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
+    background-color: #3cb371;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.buttons-area #on-off-button:active, #reset-button:active, #music-on-off:active, #clear-button:active { 
+.buttons-area #on-off-button:active,
+#reset-button:active,
+#music-on-off:active,
+#clear-button:active {
     box-shadow: none;
     transform: translateX(2px);
     top: 10px;
     left: 15px;
 }
-
-
-
-
-
-
-
-

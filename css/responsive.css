@@ -13,6 +13,9 @@
         font-size: 20px;
     }
     
+    .message h1 {
+        font-size: 30px;
+    }
 
     .buttons-area {
         width: 370px;

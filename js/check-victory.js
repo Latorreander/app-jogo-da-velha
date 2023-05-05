@@ -7,9 +7,7 @@ import { o_Market, x_Market } from "./app.js";
 const gameArea = document.querySelector(".game-area");
 const x_Points = document.getElementById('X')
 const o_Points = document.getElementById('O')
-
-const messageVictory_O = "CÍRCULO VENCEU👏👏❗"
-const messageVictory_X = "XIS VENCEU👏👏❗"
+const divMessage = document.querySelector('.message')
 
 const checkPossibilityWinner = () => {
 
@@ -38,25 +36,9 @@ const checkPossibilityWinner = () => {
         (gameArea.childNodes[5].innerText === o_Market &&
             gameArea.childNodes[9].innerText === o_Market &&
             gameArea.childNodes[13].innerText === o_Market)
-    ) 
-    {
-        o_Points.lastElementChild.innerText ++
+
+    ) { circleVictoryReturn() }
     
-        playWinnerSoundEffect();
-        setTimeout(() => {
-            
-            clearGameArea()
-        }, 1000);
-        
-        if(o_Points.lastElementChild.innerText === '3') {
-            setTimeout(() => {
-                pauseMusic()
-                winnerFinnaly()
-                alert(messageVictory_O)
-                
-            }, 1000);
-        }
-    }
 
     if (
         (gameArea.childNodes[1].innerText === x_Market &&
@@ -83,25 +65,8 @@ const checkPossibilityWinner = () => {
         (gameArea.childNodes[5].innerText === x_Market &&
             gameArea.childNodes[9].innerText === x_Market &&
             gameArea.childNodes[13].innerText === x_Market)
-    ) 
-    {
-        x_Points.lastElementChild.innerText ++
-    
-        playWinnerSoundEffect()
-        setTimeout(() => {
-            
-            clearGameArea()
-        }, 1000); 
-        
-        if(x_Points.lastElementChild.innerText === '3') {
-            setTimeout(() => {
-                pauseMusic()
-                winnerFinnaly()
-                alert(messageVictory_X)
-                
-            }, 500);
-        }
-    } 
+
+    ) { xisVictoryReturn() } 
 
       else if ((gameArea.childNodes[1].innerText !== "" &&
     gameArea.childNodes[3].innerText !== "" &&
@@ -138,5 +103,56 @@ const checkPossibilityWinner = () => {
     }
    
 };
+
+
+const circleVictoryReturn = () => {
+
+    o_Points.lastElementChild.innerText ++
+    
+    playWinnerSoundEffect();
+    setTimeout(() => {
+        
+        clearGameArea()
+    }, 1000);
+    
+    if(o_Points.lastElementChild.innerText === '1') {
+        pauseMusic()
+        winnerFinnaly()
+
+        divMessage.innerHTML = `<h1>${o_Market} VENCEU!</h1>`
+
+        divMessage.classList.add('active')
+        gameArea.classList.add('removed')
+        setTimeout(() => {
+            window.location.reload()
+        }, 8000);     
+    } 
+
+}
+
+const xisVictoryReturn = () => {
+
+    x_Points.lastElementChild.innerText ++
+    
+    playWinnerSoundEffect()
+    setTimeout(() => {
+        
+        clearGameArea()
+    }, 1000); 
+    
+    if(x_Points.lastElementChild.innerText === '3') {
+        pauseMusic()
+        winnerFinnaly()
+
+        divMessage.innerHTML = `<h1>${x_Market} VENCEU!</h1>`
+
+        divMessage.classList.add('active')
+        gameArea.classList.add('removed')
+            
+        setTimeout(() => {
+        window.location.reload()
+        }, 8000); 
+    }  
+}
 
 export { checkPossibilityWinner, gameArea, x_Points, o_Points };
