@@ -1,15 +1,20 @@
-import { pushingButtonSoundEffect, pauseMusic, playMusic } from "./sounds-effects.js";
+import { buttonClickSounds, pauseMusic, playMusic } from "./sounds-effects.js";
+
+import { x_Points, o_Points } from "./check-victory.js";
+
 import { clearGameArea } from "./clear-game.js";
 
-const sound_On_Off = document.querySelector("#button-on-off");
+const sound_On_Off = document.querySelector("#on-off-button");
 const resetButton = document.querySelector("#reset-button");
 const music_On_Off = document.querySelector('#music-on-off')
+const clearButton = document.querySelector('#clear-button')
+
 
 let soundOn = true;
 let musicOn = true
 
 sound_On_Off.addEventListener("click", () => {
-    pushingButtonSoundEffect();
+    buttonClickSounds();
     
     if ( soundOn ) {
         soundOn = false;
@@ -20,14 +25,15 @@ sound_On_Off.addEventListener("click", () => {
 });
 
 resetButton.addEventListener("click", () => {
-    pushingButtonSoundEffect();
+    buttonClickSounds();
  
-        window.location.reload()
+    o_Points.lastElementChild.innerText = 0
+    x_Points.lastElementChild.innerText = 0
  
 });
 
 music_On_Off.addEventListener('click', () => {
-    pushingButtonSoundEffect()
+    buttonClickSounds()
 
     if ( musicOn ) {
         musicOn = false
@@ -41,7 +47,9 @@ music_On_Off.addEventListener('click', () => {
     }
 })
 
-    
-
+clearButton.addEventListener('click', () => {
+    buttonClickSounds()
+    clearGameArea()
+})
 
 export { soundOn, musicOn };

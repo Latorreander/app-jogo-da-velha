@@ -121,7 +121,7 @@ main {
 }
 
 .buttons-area #reset-button,
-#button-on-off, #music-on-off {
+#on-off-button, #music-on-off,#clear-button {
     cursor: pointer;
     font-family: 'digital disco';
     font-size: 14px;
@@ -133,7 +133,7 @@ main {
 
 }
 
-.buttons-area #button-on-off:active, #reset-button:active, #music-on-off:active { 
+.buttons-area #on-off-button:active, #reset-button:active, #music-on-off:active, #clear-button:active { 
     box-shadow: none;
     transform: translateX(2px);
     top: 10px;

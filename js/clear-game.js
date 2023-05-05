@@ -1,6 +1,7 @@
 import { gameArea } from "./check-victory.js";
 
 const clearGameArea = () => {
+    
     if( (gameArea.childNodes[1].innerText !== "" ||
     gameArea.childNodes[3].innerText !== "" ||
     gameArea.childNodes[5].innerText !== "") ||
