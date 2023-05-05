@@ -3,13 +3,12 @@ import { pauseMusic, playWinnerSoundEffect, playtiedSoundEffect, winnerFinnaly }
 import { clearGameArea } from "./clear-game.js";
 
 import { o_Market, x_Market } from "./app.js";
+import { rounds } from "./rounds.js";
 
 const gameArea = document.querySelector(".game-area");
 const x_Points = document.getElementById('X')
 const o_Points = document.getElementById('O')
 const divMessage = document.querySelector('.message')
-
-const rounds = '2'
 
 const checkPossibilityWinner = () => {
 
