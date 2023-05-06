@@ -31,9 +31,42 @@
 
 @media(max-width: 376px){
 
+    .separator {
+        height: 60px;
+    }
+
     .buttons-area {
         width: 350px;
         column-gap: 20px;
         
     }
+}
+
+@media(max-width: 321px) {
+
+    .scoreboard {
+        width: 220px;
+        height: 80px;
+    }
+
+    .scoreboard .market {
+        font-size: 18px;
+    }
+
+    .scoreboard .market p {
+        font-size: 18px;
+    }
+
+    .separator {
+        height: 50px;
+    }
+
+    .buttons-area {
+        width: 300px;
+    }
+
+    .buttons-area  #reset-button, #music-on-off, #clear-button, #on-off-button {
+        font-size: 10px;   
+       
+   }
 }
