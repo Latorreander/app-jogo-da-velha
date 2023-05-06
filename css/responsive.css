@@ -1,7 +1,11 @@
-@media(max-width: 426px){
+@media (max-width: 426px) {
     .game-area {
         grid-template-columns: 110px 110px 110px;
-        grid-template-rows: 110px 110px 110px;  
+        grid-template-rows: 110px 110px 110px;
+    }
+
+    .game-area .square {
+        font-size: 30px;
     }
 
     .scoreboard {
@@ -12,7 +16,7 @@
     .scoreboard .market {
         font-size: 20px;
     }
-    
+
     .message h1 {
         font-size: 30px;
     }
@@ -20,16 +24,20 @@
     .buttons-area {
         width: 370px;
         column-gap: 20px;
-          
     }
 
-    .buttons-area  #reset-button, #music-on-off, #clear-button, #on-off-button {
-         font-size: 12px;   
-        
+    .buttons-area #reset-button,
+    #music-on-off,
+    #clear-button,
+    #on-off-button {
+        font-size: 12px;
     }
 }
 
-@media(max-width: 376px){
+@media (max-width: 376px) {
+    .game-area .square {
+        font-size: 30px;
+    }
 
     .separator {
         height: 60px;
@@ -38,12 +46,10 @@
     .buttons-area {
         width: 350px;
         column-gap: 20px;
-        
     }
 }
 
-@media(max-width: 321px) {
-
+@media (max-width: 321px) {
     .scoreboard {
         width: 220px;
         height: 80px;
@@ -61,12 +67,23 @@
         height: 50px;
     }
 
+    .game-area {
+        grid-template-columns: 90px 90px 90px;
+        grid-template-rows: 90px 90px 90px;
+    }
+
+    .game-area .square {
+        font-size: 20px;
+    }
+
     .buttons-area {
         width: 300px;
     }
 
-    .buttons-area  #reset-button, #music-on-off, #clear-button, #on-off-button {
-        font-size: 10px;   
-       
-   }
+    .buttons-area #reset-button,
+    #music-on-off,
+    #clear-button,
+    #on-off-button {
+        font-size: 10px;
+    }
 }
