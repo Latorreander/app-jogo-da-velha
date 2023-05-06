@@ -13,6 +13,10 @@
         height: 90px;
     }
 
+    .separator {
+        height: 60px;
+    }
+
     .scoreboard .market {
         font-size: 20px;
     }
