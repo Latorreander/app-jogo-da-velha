@@ -27,12 +27,14 @@ const tiedCondition = () => {
         if ( tiedAmount >= 7 ) {
 
             playtiedSoundEffect()
-            tiedAmount = 0
+            
             
             setTimeout(() => {
                 
                 cells.forEach( cell => cell.innerText = "")    
             }, 1000); 
+            
+            tiedAmount = 0
         }
     }
 
