@@ -69,8 +69,12 @@ const circleVictoryReturn = () => {
 
         divMessage.innerHTML = `<h1>${o_Market} VENCEU!</h1>`;
 
-        divMessage.classList.add("active");
-        gameArea.classList.add("removed");
+        setTimeout(() => {
+
+            divMessage.classList.add("active");
+            gameArea.classList.add("removed");
+        }, 500);
+
         setTimeout(() => {
             confirm("JOGAR NOVAMENTE?")
                 ? window.location.reload()
@@ -89,18 +93,17 @@ const xisVictoryReturn = () => {
     }, 1000);
 
     if (x_Points.lastElementChild.innerText === rounds) {
-        
+        pauseMusic();
+        winnerFinnaly();
+
         setTimeout(() => {
-            pauseMusic();
-            winnerFinnaly();
+            
+            divMessage.innerHTML = `<h1>${x_Market} VENCEU!</h1>`;
+
+            divMessage.classList.add("active");
+            gameArea.classList.add("removed");
         }, 500);
-      
-
-        divMessage.innerHTML = `<h1>${x_Market} VENCEU!</h1>`;
-
-        divMessage.classList.add("active");
-        gameArea.classList.add("removed");
-
+       
         setTimeout(() => {
             confirm("JOGAR NOVAMENTE?");
         }, 3000);
