@@ -12,7 +12,9 @@ import { tiedCondition } from "./tie-condition.js";
 
 // import { risk } from "./scratch.js";
 
-const link = "https://www.linkedin.com/in/anderson-latorre-cabral-a48b78201/ ";
+const creditsMessage = `ME SIGA NO LINKEDIN: https://www.linkedin.com/in/anderson-latorre-cabral-a48b78201/
+ 
+OBRIGADO!`;
 
 const gameArea = document.querySelector(".game-area");
 const x_Points = document.getElementById("X");
@@ -78,8 +80,7 @@ const circleVictoryReturn = () => {
         setTimeout(() => {
             confirm("JOGAR NOVAMENTE?")
                 ? window.location.reload()
-                : alert(`Me siga no linkedIn: ${link}
-            Obrigado!`);
+                : alert(creditsMessage);
         }, 3000);
     }
 };
@@ -97,7 +98,7 @@ const xisVictoryReturn = () => {
         winnerFinnaly();
 
         setTimeout(() => {
-            
+
             divMessage.innerHTML = `<h1>${x_Market} VENCEU!</h1>`;
 
             divMessage.classList.add("active");
@@ -105,7 +106,9 @@ const xisVictoryReturn = () => {
         }, 500);
        
         setTimeout(() => {
-            confirm("JOGAR NOVAMENTE?");
+            confirm("JOGAR NOVAMENTE?")
+            ? window.location.reload()
+            : alert(creditsMessage);
         }, 3000);
     }
 };
