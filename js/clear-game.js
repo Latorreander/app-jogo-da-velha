@@ -1,61 +1,8 @@
 
-import { gameArea } from "./check-victory.js"
+import { cells } from "./check-victory.js";
 
 const clearGameArea = () => {
+    cells.forEach((cell) => (cell.innerText = ""));
+};
 
-    if( (gameArea.childNodes[1].innerText !== "" ||
-    gameArea.childNodes[3].innerText !== "" ||
-    gameArea.childNodes[5].innerText !== "") ||
-(gameArea.childNodes[7].innerText !== "" ||
-    gameArea.childNodes[9].innerText !== "" ||
-    gameArea.childNodes[11].innerText !== "") ||
-(gameArea.childNodes[13].innerText !== "" ||
-    gameArea.childNodes[15].innerText !== "" ||
-    gameArea.childNodes[17].innerText !== "") ||
-(gameArea.childNodes[1].innerText !== "" ||
-    gameArea.childNodes[7].innerText !== "" ||
-    gameArea.childNodes[13].innerText !== "") ||
-(gameArea.childNodes[3].innerText !== "" ||
-    gameArea.childNodes[9].innerText !== "" ||
-    gameArea.childNodes[15].innerText !== "") ||
-(gameArea.childNodes[5].innerText !== "" ||
-gameArea.childNodes[11].innerText !== "" ||
-    gameArea.childNodes[19].innerText !== "") ||
-(gameArea.childNodes[1].innerText !== "" ||
-    gameArea.childNodes[9].innerText !== "" ||
-    gameArea.childNodes[17].innerText !== "") ||
-(gameArea.childNodes[5].innerText !== "" ||
-    gameArea.childNodes[9].innerText !== "" ||
-    gameArea.childNodes[13].innerText !== ""))
-
-    { 
-        gameArea.childNodes[1].innerText = "" 
-        gameArea.childNodes[3].innerText = "" 
-        gameArea.childNodes[5].innerText = ""
-    gameArea.childNodes[7].innerText = "" 
-        gameArea.childNodes[9].innerText = "" 
-        gameArea.childNodes[11].innerText = ""
-    gameArea.childNodes[13].innerText = "" 
-        gameArea.childNodes[15].innerText = "" 
-        gameArea.childNodes[17].innerText = "" 
-    gameArea.childNodes[1].innerText = "" 
-        gameArea.childNodes[7].innerText = "" 
-        gameArea.childNodes[13].innerText = "" 
-    gameArea.childNodes[3].innerText = "" 
-        gameArea.childNodes[9].innerText = "" 
-        gameArea.childNodes[15].innerText = "" 
-    gameArea.childNodes[5].innerText = "" 
-    gameArea.childNodes[11].innerText = "" 
-        gameArea.childNodes[17].innerText = "" 
-    gameArea.childNodes[1].innerText = "" 
-        gameArea.childNodes[9].innerText = "" 
-        gameArea.childNodes[19].innerText = "" 
-    gameArea.childNodes[5].innerText = "" 
-        gameArea.childNodes[9].innerText = "" 
-        gameArea.childNodes[13].innerText = ""
-        
-    }
-
-}
-
-export { clearGameArea }
+export { clearGameArea };

@@ -1,14 +1,9 @@
-
-let rounds = ''
-
-
+let rounds = "";
 
 const setRound = () => {
-    
-    return prompt('ESCOLHA O NÚMERO DE PARTIDAS:')
-    
-}
+    return prompt("ESCOLHA O NÚMERO DE PARTIDAS:");
+};
 
-rounds = setRound()
+rounds = setRound();
 
-export { rounds }
+export { rounds };
