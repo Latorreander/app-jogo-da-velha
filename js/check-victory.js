@@ -89,8 +89,12 @@ const xisVictoryReturn = () => {
     }, 1000);
 
     if (x_Points.lastElementChild.innerText === rounds) {
-        pauseMusic();
-        winnerFinnaly();
+        
+        setTimeout(() => {
+            pauseMusic();
+            winnerFinnaly();
+        }, 500);
+      
 
         divMessage.innerHTML = `<h1>${x_Market} VENCEU!</h1>`;
 
