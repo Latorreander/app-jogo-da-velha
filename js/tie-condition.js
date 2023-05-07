@@ -1,7 +1,7 @@
 import { playtiedSoundEffect } from "./sounds-effects.js"
 import { cells } from "./check-victory.js"
 
-let amount = 0
+let tiedAmount = 0
 
 const tiedCondition = () => {
 
@@ -20,13 +20,15 @@ const tiedCondition = () => {
        const tied =  winningCombinations.some( combination => combination.every( index => cells[index].textContent !== ''))
        
        if ( tied  ){
-           amount += 1
+           tiedAmount += 1
 
         } 
 
-        if ( amount >= 7 ) {
+        if ( tiedAmount >= 7 ) {
 
             playtiedSoundEffect()
+            tiedAmount = 0
+            
             setTimeout(() => {
                 
                 cells.forEach( cell => cell.innerText = "")    
