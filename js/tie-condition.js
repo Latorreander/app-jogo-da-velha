@@ -32,8 +32,7 @@ const tiedCondition = () => {
             setTimeout(() => {
                 
                 cells.forEach( cell => cell.innerText = "")    
-            }, 1000);
-            
+            }, 1000); 
         }
     }
 
