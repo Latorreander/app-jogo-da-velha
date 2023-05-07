@@ -4,6 +4,7 @@ import { clearGameArea } from "./clear-game.js";
 
 import { o_Market, x_Market } from "./app.js";
 import { rounds } from "./rounds.js";
+// import { risk } from "./scratch.js";
 
 let link = 'https://www.linkedin.com/in/anderson-latorre-cabral-a48b78201/ '
 
@@ -11,107 +12,46 @@ const gameArea = document.querySelector(".game-area");
 const x_Points = document.getElementById('X')
 const o_Points = document.getElementById('O')
 const divMessage = document.querySelector('.message')
+const cells = document.querySelectorAll('.square')
+
 
 const checkPossibilityWinner = () => {
 
-     if (
-        (gameArea.childNodes[1].innerText === o_Market &&
-            gameArea.childNodes[3].innerText === o_Market &&
-            gameArea.childNodes[5].innerText === o_Market) ||
-        (gameArea.childNodes[7].innerText === o_Market &&
-            gameArea.childNodes[9].innerText === o_Market &&
-            gameArea.childNodes[11].innerText === o_Market) ||
-        (gameArea.childNodes[13].innerText === o_Market &&
-            gameArea.childNodes[15].innerText === o_Market &&
-            gameArea.childNodes[17].innerText === o_Market) ||
-        (gameArea.childNodes[1].innerText === o_Market &&
-            gameArea.childNodes[7].innerText === o_Market &&
-            gameArea.childNodes[13].innerText === o_Market) ||
-        (gameArea.childNodes[3].innerText === o_Market &&
-            gameArea.childNodes[9].innerText === o_Market &&
-            gameArea.childNodes[15].innerText === o_Market) ||
-        (gameArea.childNodes[5].innerText === o_Market &&
-            gameArea.childNodes[11].innerText === o_Market &&
-            gameArea.childNodes[17].innerText === o_Market) ||
-        (gameArea.childNodes[1].innerText === o_Market &&
-            gameArea.childNodes[9].innerText === o_Market &&
-            gameArea.childNodes[17].innerText === o_Market) ||
-        (gameArea.childNodes[5].innerText === o_Market &&
-            gameArea.childNodes[9].innerText === o_Market &&
-            gameArea.childNodes[13].innerText === o_Market)
-
-    ) { circleVictoryReturn() }
+    const getWinner = cells => {
+        const winningCombinations = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ]
     
+    const o_Victory =  winningCombinations.some( combination => 
+    combination.every( index => cells[index].textContent === o_Market))
 
-    if (
-        (gameArea.childNodes[1].innerText === x_Market &&
-            gameArea.childNodes[3].innerText === x_Market &&
-            gameArea.childNodes[5].innerText === x_Market) ||
-        (gameArea.childNodes[7].innerText === x_Market &&
-            gameArea.childNodes[9].innerText === x_Market &&
-            gameArea.childNodes[11].innerText === x_Market) ||
-        (gameArea.childNodes[13].innerText === x_Market &&
-            gameArea.childNodes[15].innerText === x_Market &&
-            gameArea.childNodes[17].innerText === x_Market) ||
-        (gameArea.childNodes[1].innerText === x_Market &&
-            gameArea.childNodes[7].innerText === x_Market &&
-            gameArea.childNodes[13].innerText === x_Market) ||
-        (gameArea.childNodes[3].innerText === x_Market &&
-            gameArea.childNodes[9].innerText === x_Market &&
-            gameArea.childNodes[15].innerText === x_Market) ||
-        (gameArea.childNodes[5].innerText === x_Market &&
-            gameArea.childNodes[11].innerText === x_Market &&
-            gameArea.childNodes[17].innerText === x_Market) ||
-        (gameArea.childNodes[1].innerText === x_Market &&
-            gameArea.childNodes[9].innerText === x_Market &&
-            gameArea.childNodes[17].innerText === x_Market) ||
-        (gameArea.childNodes[5].innerText === x_Market &&
-            gameArea.childNodes[9].innerText === x_Market &&
-            gameArea.childNodes[13].innerText === x_Market)
-
-    ) { xisVictoryReturn() } 
-
-      else if ((gameArea.childNodes[1].innerText !== "" &&
-    gameArea.childNodes[3].innerText !== "" &&
-    gameArea.childNodes[5].innerText !== "") &&
-        (gameArea.childNodes[7].innerText !== "" &&
-    gameArea.childNodes[9].innerText !== "" &&
-    gameArea.childNodes[11].innerText !== "") &&
-        (gameArea.childNodes[13].innerText !== "" &&
-    gameArea.childNodes[15].innerText !== "" &&
-    gameArea.childNodes[17].innerText !== "") &&
-        (gameArea.childNodes[1].innerText !== "" &&
-    gameArea.childNodes[7].innerText !== "" &&
-    gameArea.childNodes[13].innerText !== "") &&
-        (gameArea.childNodes[3].innerText !== "" &&
-    gameArea.childNodes[9].innerText !== "" &&
-    gameArea.childNodes[15].innerText !== "") &&
-        (gameArea.childNodes[5].innerText !== "" &&
-    gameArea.childNodes[11].innerText !== "" &&
-    gameArea.childNodes[17].innerText !== "") &&
-        (gameArea.childNodes[1].innerText !== "" &&
-    gameArea.childNodes[9].innerText !== "" &&
-    gameArea.childNodes[17].innerText !== "") &&
-        (gameArea.childNodes[5].innerText !== "" &&
-    gameArea.childNodes[9].innerText !== "" &&
-    gameArea.childNodes[13].innerText !== "")
-    
-    ) {
-        setTimeout(() => {
-           
-            clearGameArea()
-        }, 1000); 
-        
-        playtiedSoundEffect()
-    }
+    const x_Victory =  winningCombinations.some( combination => 
+    combination.every( index => cells[index].textContent === x_Market))
    
+    if ( o_Victory ){
+        circleVictoryReturn() 
+    }
+    
+    else if ( x_Victory ){
+        xisVictoryReturn()
+        }
+    }
+  
+
+    getWinner(cells)
 };
 
-
 const circleVictoryReturn = () => {
-
-    o_Points.lastElementChild.innerText ++
     
+    o_Points.lastElementChild.innerText ++
+//    risk()
     playWinnerSoundEffect();
     setTimeout(() => {
         
@@ -128,11 +68,10 @@ const circleVictoryReturn = () => {
         gameArea.classList.add('removed')
         setTimeout(() => {
 
-            confirm('jogar dinovo?') ? window.location.reload() : alert(`Me siga no linkedIn: ${link}
+            confirm('JOGAR NOVAMENTE?') ? window.location.reload() : alert(`Me siga no linkedIn: ${link}
             Obrigado!`)
         }, 8000);     
     } 
-
 }
 
 const xisVictoryReturn = () => {
@@ -160,4 +99,9 @@ const xisVictoryReturn = () => {
     }  
 }
 
-export { checkPossibilityWinner, gameArea, x_Points, o_Points };
+
+
+
+
+
+export {  gameArea, x_Points, o_Points, cells, checkPossibilityWinner };
